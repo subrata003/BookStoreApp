@@ -1,0 +1,33 @@
+.loginfrom{
+ background-color: rgb(209, 6, 209);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+.from{
+box-shadow: 10px 10px 55px black;
+ padding: 1.4rem;
+ width: 35vw;
+ height: auto;
+ background-color: white;
+ border-radius: 5px;
+
+}
+.s{
+ background-color: rgb(224, 12, 224);
+ color: white;
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ padding: 7px 10px;
+}
+.res{
+ display: flex;
+ 
+ justify-content: space-between;
+
+}
+.color{
+ color: red;
+}

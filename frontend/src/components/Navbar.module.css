@@ -1,0 +1,20 @@
+.secdiv{
+ display: flex;
+ justify-content: center;
+ gap: 5rem;
+}
+.mainnav{
+ position: sticky;
+ top: 0;
+ z-index: 10;
+ box-shadow: 1px 2px 4px rgb(67, 67, 67);
+}
+.sbmt{
+ background-color: black;
+ color: white;
+}
+.sbmt:hover{
+ background-color: black;
+ color: white;
+}
+

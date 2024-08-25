@@ -1,0 +1,68 @@
+.maindiv{
+ width: 100vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 6rem;
+}
+.leftdiv{
+ width: 50%;
+}
+.rightdiv{
+ width: 50%;
+}
+.bannerimg{
+ width: 40rem;
+}
+.spamcolor{color:rgb(198, 9, 198);
+ font-weight: 600;
+
+}
+.p{
+ font-size: 18px;
+}
+.input{
+ display: flex;
+ align-items: center;
+ border:none;
+ border-radius: 5px;
+ box-shadow: 0px 2px 5px black;
+
+}
+.input input{
+ border: none;
+ outline: none;
+ background-color: transparent;
+ font-size: 18px;
+}
+.secbtn{
+ background-color: rgb(198, 9, 198);
+ padding: 9px 15px;
+ color: white;
+}
+.secbtn:hover{
+ background-color: rgb(162, 9, 162);
+ color: white;
+}
+.icon{
+ font-size: 25px;
+}
+@media(max-width:720px){
+ .maindiv{
+  
+display: flex;
+flex-direction: column;
+margin: 0 2rem;
+ 
+ }
+ .leftdiv{
+  width: 100%;
+ }
+ .rightdiv{
+  width: 100%;
+ }
+ .bannerimg{
+  width: 30rem;
+ }
+}
+
