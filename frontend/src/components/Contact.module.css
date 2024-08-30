@@ -46,3 +46,10 @@ input[type=submit]:hover {
 .color{
  color: rgb(199, 8, 199);
 }
+@media(max-width:720px){
+ .form{ box-shadow:5px 5px 10px black;
+ border-radius: 8px;
+ width: 20rem;
+ padding: 2rem 2rem;
+ }
+}

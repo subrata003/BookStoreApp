@@ -9,12 +9,26 @@
  z-index: 10;
  box-shadow: 1px 2px 4px rgb(67, 67, 67);
 }
-.sbmt{
+.btn{
  background-color: black;
  color: white;
 }
-.sbmt:hover{
+.btn:hover{
  background-color: black;
  color: white;
+}
+.darkbtn{
+ padding: 5px 10px;
+ border-radius: 5px;
+ border: none;
+ background-color: rgb(237, 54, 54);
+ color: white;
+}
+@media(max-width:720px){
+ .secdiv{
+  display: block;
+  justify-content: center;
+  gap: 5rem;
+ }
 }
 

@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./Course.module.css"
-import List from "../../public/List.json"
+
+import axios from "axios"
 import Card from './Card'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 import {Link} from "react-router-dom"
 function Course() {
+  const [book,usebook]=useState([])
+  useEffect(()=>{
+    const getbook=async()=>{
+      try {
+        const newfetchdata=await axios.get("http://localhost:4001/book")
+        console.log(newfetchdata.data);
+        usebook(newfetchdata.data)
+        
+      } catch (error) {
+        console.log(`there is some error ${error}`);
+        
+      }
+    }
+    getbook()
+  },[])
   return (
     <>
     <Navbar/>
@@ -18,7 +34,7 @@ function Course() {
         </Link>
       </div>
       <div className={style.imgdiv}>
-            {List.map((e)=>(
+            {book.map((e)=>(
               <Card e={e} key={e.id}/>
             ))}
       </div>

@@ -3,13 +3,16 @@
  display: flex;
  justify-content: center;
  align-items: center;
- margin: 0 6rem;
+ 
 }
 .leftdiv{
  width: 50%;
+ padding: 2rem;
+ margin: 3rem 5rem;
 }
 .rightdiv{
  width: 50%;
+ padding: 2rem;
 }
 .bannerimg{
  width: 40rem;
@@ -52,17 +55,27 @@
   
 display: flex;
 flex-direction: column;
-margin: 0 2rem;
+
  
  }
  .leftdiv{
   width: 100%;
+  
+  padding: 2rem;
+  
+ }
+ .leftdiv h1{
+  font-size: 25px;
  }
  .rightdiv{
   width: 100%;
+  padding: 0 2rem;
  }
  .bannerimg{
-  width: 30rem;
+  width: 100%;
+ }
+ .p{
+  width: 80vw;
  }
 }
 

@@ -31,3 +31,13 @@ box-shadow: 10px 10px 55px black;
 .color{
  color: red;
 }
+@media(max-width:720px){
+ .from{
+  box-shadow: 10px 10px 55px black;
+    padding: 1.4rem;
+    width: 80vw;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+ }
+}

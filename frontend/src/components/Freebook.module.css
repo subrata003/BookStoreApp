@@ -1,3 +1,8 @@
 .maindiv{
  margin: 1rem 6rem;
 }
+@media(max-width:720px){
+ .maindiv{
+  margin: 2rem;
+ }
+}

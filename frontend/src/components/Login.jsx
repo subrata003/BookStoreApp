@@ -1,8 +1,11 @@
 import React from 'react'
 import style from "./Login.module.css"
-import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
+import toast, { Toaster } from 'react-hot-toast';
 function Login() {
+  const navigate=useNavigate()
  const {
   register,
   handleSubmit,
@@ -10,7 +13,29 @@ function Login() {
   formState: { errors },
 } = useForm()
 
-const onSubmit = (data) => console.log(data)
+const onSubmit = async (data) =>{
+  const userinfo={
+    fullname:data.fullname,
+    email:data.email,
+    password:data.password
+  }
+  await axios.post("http://localhost:4001/user/login",userinfo)
+  .then((res)=>{
+    if(res.data){
+      
+      toast.success('login successfully !')
+      navigate("/")
+      window.location.reload()
+    }
+    localStorage.setItem("users",JSON.stringify(res.data.user))
+  }).catch((err)=>{
+    
+    toast.error("login error")
+  })
+}
+const gotohome=()=>{
+
+}
  return (
   <div className={style.loginfrom}>
    <form className={style.from} onSubmit={handleSubmit(onSubmit)}>
@@ -30,8 +55,8 @@ const onSubmit = (data) => console.log(data)
      <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <div className={style.res}> 
-    <button type="submit" class={`btn ${style.s}`}>Submit</button>
-    <p>Not register?<a href='/register'>Signup</a></p>
+    <button type="submit" class={`btn ${style.s}`} > Submit</button>
+    <a href='/register'>Signup</a>
     <NavLink to="/"><button className={style.s}>go Back</button></NavLink> 
     </div>
     

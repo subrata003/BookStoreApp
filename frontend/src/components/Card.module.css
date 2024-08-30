@@ -13,7 +13,7 @@
 }
 .maindiv{
  
- margin: 4rem 2rem;
+ margin: 4rem 1rem;
  width: 20vw;
  height: 30rem;
  /* border: none; */
@@ -27,4 +27,16 @@
  border-radius: 10px;
  color: white;
  background-color: rgb(215, 8, 215);
+}
+@media(max-width:720px){
+ .maindiv{
+ 
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70vw;
+  
+  /* border: none; */
+  box-shadow: 1px 10px 15px rgb(56, 56, 56);
+ }
 }
